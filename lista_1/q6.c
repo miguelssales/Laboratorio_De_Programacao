@@ -1,18 +1,17 @@
 #include <stdio.h>
 int main(){
-    float altura;
-    char sexo;
+    int horas, minutos, segundos, total;
 
-    puts("Entre com a altura em metros:");
-    scanf("%f", &altura);
-    puts("Entre com o sexo[F/M]: ");
-    scanf(" %c", &sexo);
+    puts("Entre com a quantidade de horas: ");
+    scanf("%d", &horas);
+    puts("Entre com a quantidade de minutos: ");
+    scanf("%d", &minutos);
+    puts("Entre com a quantidade segundos: ");
+    scanf("%d", &segundos);
 
-    if (sexo == 'M' || sexo == 'm') {
-        printf("Peso ideal: %.2f kg\n", 72.7 * altura - 58);
-    } else if (sexo == 'F' || sexo == 'f') {
-        printf("Peso ideal: %.2f kg\n", 62.1 * altura - 44.7);
-    }
+    total = horas * 3600 + minutos * 60 + segundos;
+
+    printf("Total de segundos: %d s\n", total);
 
     return 0;
 }

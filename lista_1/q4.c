@@ -1,14 +1,11 @@
 #include <stdio.h>
+int main(){
+    float conta;
 
-int main() {
-    int X;
+    puts("Entre com o valor da conta: R$ ");
+    scanf("%f", &conta);
 
-    puts("Entre com um valor inteiro: ");
-    scanf("%d", &X);
-
-    printf("Triplo: %d\n", X * 3);
-    printf("Quadrado: %d\n", X * X);
-    printf("Meio: %d\n", X / 2);
+    printf("Total a pagar = R$ %.2f\n", conta * 1.10);
 
     return 0;
 }
