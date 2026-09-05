@@ -4,9 +4,8 @@ int main(){
     puts("Entre com um valor de 1 a 7: ");
     scanf("%hhu", &diaDaSemana);
 
-    while(diaDaSemana != 0){
-        
-            switch (diaDaSemana){
+    do{
+        switch (diaDaSemana){
                 case(1):
                     puts("Domingo\n");
                     break;
@@ -37,12 +36,12 @@ int main(){
 
                 default:
                     puts("Numero do dia invalido!\n");
+                
             }
-        
-        puts("Entre novamente com um valor de 1 a 7: ");
-        scanf("%hhu", &diaDaSemana);
-    }
+            puts("Entre novamente com um valor de 1 a 7: ");
+            scanf("%hhu", &diaDaSemana);
 
+    }while(diaDaSemana != 0);
 
     return 0;
 }
