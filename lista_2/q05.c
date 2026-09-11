@@ -1,22 +1,30 @@
 #include <stdio.h>
 int main(){
-    float n1;
-    float n2;
+    int n, maior, menor;
 
-    puts("Entre com o primeiro valor:");
-    scanf("%f", &n1);
+    puts("Entre com um valor: ");
+    puts("*digite 0 para finalizar");
+    scanf("%d", &n);
+    maior = n;
+    menor = n;
 
-    puts("Entre com o segundo valor:");
-    scanf("%f", &n2);
-
-    while (n2 == 0)
-    {
-        puts("O divisor nao pode ser zero.");
-        puts("Entre novamente com o segundo valor:");
-        scanf("%f", &n2);
+    while(n != 0){
+    
+        puts("Entre com um valor: ");
+        puts("*digite 0 para finalizar");
+        scanf("%d", &n);
+        if (n > maior)
+        {
+            maior = n;
+        }
+        else if(n < menor && n != 0)
+        {
+            menor = n;
+        }
+   
     }
 
-    printf("Resultado da divisao: %.2f\n", n1 / n2);
+    printf("Maior valor: %d\nMenor valor: %d", maior, menor);
 
     return 0;
 }
