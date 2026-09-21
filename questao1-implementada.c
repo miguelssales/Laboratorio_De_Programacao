@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-    unsigned int R, G, B, M;
+    int R, G, B, M;
     int b0, b1, b2;
 
     scanf("%d", &R);
