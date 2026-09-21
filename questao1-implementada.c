@@ -1,22 +1,26 @@
 #include <stdio.h>
 int main(){
-    int R, G, B, M;
+    int r, g, b, m;
     int b0, b1, b2;
 
-    scanf("%d", &R);
-    scanf("%d", &G);
-    scanf("%d", &B);
-    scanf("%d", &M);
+    printf("r:");
+    scanf("%d", &r);
+    printf("g:");
+    scanf("%d", &g);
+    printf("b:");
+    scanf("%d", &b);
+    printf("m:");
+    scanf("%d", &m);
 
-     b0 = M & 1;
-     b1 = (M >> 1) & 1;
-     b2 = (M >> 2) & 1;
+    b0 = m & 1;
+    b1 = (m & 2) >> 1;
+    b2 = (m & 4) >> 2;
 
-     R = (R & 254) | b2;
-     G = (G & 254) | b1;
-     B = (B & 254) | b0;
+    r = (r & 254) | b2;
+    g = (g & 254) | b1;
+    b = (b & 254) | b0;
 
-     printf("%d %d %d\n", R,G,B);
+    printf("r = %d\ng = %d\nb = %d\n", r,g,b);
 
     return 0;
 }
