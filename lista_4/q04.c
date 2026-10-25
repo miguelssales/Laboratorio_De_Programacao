@@ -11,8 +11,8 @@ int main(){
 
     puts("Entre com outra string: ");
     fgets(str2, sizeof(str2), stdin);
-
     
+
     int i = 0;
     while(str1[i] != '\n' && str2[i] != '\n')
     {
